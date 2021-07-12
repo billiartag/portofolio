@@ -1,0 +1,13 @@
+<footer class="footer mt-auto py-1 bg-light fixed-bottom">
+   <div class="row">
+      <div class="col">
+      </div>
+      <div class="col-4 p-2 m-3">
+         <ul style="list-style-type: none;">
+            {% for link in site.data.links %}
+            <li><i class="{{link.icon}}"></i>&nbsp;<a href="{{link.link}}" class="link-dark">{{link.name}}</a></li>
+            {% endfor %}
+         </ul>
+      </div>
+   </div>
+ </footer>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Works - Billiarta</title>
+   {% include cdn_header.html %}
+</head>
+<body class="container">
+   {% include navbar.html %}
+   dis home <br>
+   {% for post in site.posts %}
+      {{ post.title }}
+   {% endfor %}
+   end
+   {% include footer.html %}
+</body>
+</html>

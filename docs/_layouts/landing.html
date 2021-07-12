@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Home - Billiarta</title>
+   {% include cdn_header.html %}
+</head>
+<body class="container">
+   {% include navbar.html %}
+   <div id="body" class="container-fluid">
+      <div class="row">
+         <div class="col-2 d-none d-md-block d-lg-block d-xl-block bg-dark bg-gradient"></div>
+         <div class="col">
+            <div class="row m-2">
+               <div class="col-sm-8">
+                  <div class="card">
+                     <div class="container-fluid p-3 bg-success bg-gradient rounded text-white">
+                        <h1 class="display-4 p-1">
+                           Halo, Saya Billiarta</h1>
+                     </div>
+                     <div class="card-body">
+                        <p>
+                           Saya adalah mahasiswa Teknik Informatika (Computer Science). Lihat Selengkapnya pada halaman <a href="{{site.url}}/about.html">About Me</a>.  
+                        </p>
+                     </div>
+                  </div>
+                  <div class="card my-2">
+                     <div class="card-header">
+                        <span class="h4">Latest Work</span>
+                     </div>
+                     <div class="card-body"></div>
+                  </div>
+               </div>
+               <div class="col-sm-4">
+                  <div class="card mb-2">
+                     <div class="card-header">
+                        <span class="h4">Contact Me</span>
+                     </div>
+                     <div class="card-body">
+                        Hubungi Saya dengan: 
+                        <ul class="list-group list-group-flush">
+                           {% for link in site.data.contact_links %}
+                           <li class="list-group-item"><i class="{{link.icon}}"></i>&nbsp;
+                              <a href="{{link.link}}" class="link-dark">{{link.name}}</a>
+                           </li>
+                           {% endfor %}
+                         </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>      
+   </div>
+   {% include footer.html %}
+</body>
+</html>

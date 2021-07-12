@@ -1,0 +1,6 @@
+- name: "Home"
+  link: 
+- name: "Works"
+  link: "works.html"
+- name: "About Me"
+  link: "about.html"

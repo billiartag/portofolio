@@ -1,0 +1,13 @@
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+   {%- comment -%} <a href="{{ site.url }}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"> {%- endcomment -%}
+   <a href="/portofolio/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+     <span class="fs-4">Portofolio</span>
+   </a>
+
+   <ul class="nav nav-pills">
+    {% for item in site.data.navbar_items %}
+      {%- comment -%} <li class="nav-item"><a href="{{ site.url }}/{{item.link}}" class="nav-link">{{item.name}}</a></li> {%- endcomment -%}
+      <li class="nav-item"><a href="http://127.0.0.1:4000/portofolio/{{item.link}}" class="nav-link">{{item.name}}</a></li>
+    {% endfor %}
+   </ul>
+ </header>

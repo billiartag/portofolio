@@ -1,0 +1,6 @@
+- name: "Linkedin"
+  icon: "fab fa-linkedin-in"
+  link: "https://www.linkedin.com/in/billy-gondokusuma/"
+- name: "Email"
+  icon: "fas fa-envelope"
+  link: "mailto:billy.gondokusuma@hotmail.com"
