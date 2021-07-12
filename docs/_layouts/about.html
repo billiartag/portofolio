@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>About Me - Billiarta</title>
+   {% include cdn_header.html %}
+   <style>
+   ul.timeline {
+      list-style-type: none;
+      position: relative;
+   }
+   ul.timeline:before {
+      content: ' ';
+      background: #d4d9df;
+      display: inline-block;
+      position: absolute;
+      left: 29px;
+      width: 2px;
+      height: 100%;
+      z-index: 400;
+   }
+   ul.timeline > li {
+      margin: 20px 0;
+      padding-left: 20px;
+   }
+   ul.timeline > li:before {
+      content: ' ';
+      background: white;
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid #22c0e8;
+      left: 20px;
+      width: 20px;
+      height: 20px;
+      z-index: 400;
+   }
+   </style>
+</head>
+<body class="container">
+   {% include navbar.html %}
+   <div class="row">
+      <div class="col-sm-8">
+         <div class="p-4 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+              <h1 class="display-5 fw-bold">Halo, Saya Billiarta</h1>
+               <p class="col-sm-10">
+                  Halo, nama Saya Cosmas Yustianus Billiarta Gondokusuma, sering dipanggil dengan Billiarta atau Cosmas. <br>
+                  Saya adalah mahasiswa Teknik Informatika Institut Sains dan Teknologi Terpadu Surabaya dari penjurusan Computer Science. 
+               </p>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-header fs-5">Projects</div>
+            <div class="card-body">
+               <p></p>
+            </div>
+          </div>
+          
+          <div class="p-2 mb-3 bg-light rounded-3">
+              <h1 class="fs-5 mx-2">Courses</h1>
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+               {% for course in site.data.courses %}
+               <div class="col">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">{{course.title}}</h5>
+                      <p class="card-text">{{course.desc}}</p>                      
+                      <span class="fw-bold">Publisher: {{course.publisher}}</span>
+                    </div>
+                    <div class="card-footer">
+                       <a href="{{course.link}}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary float-end">Cek</a>
+                    </div>
+                  </div>
+                </div>
+               {% endfor %}
+             </div>
+          </div>
+
+          <div class="card mb-3">
+            <div class="card-header fs-5">Skills</div>
+            <div class="card-body">
+               <p></p>
+            </div>
+          </div>
+      </div>
+      <div class="col-sm-4">
+         <!-- <img src="http://127.0.0.1:4000/portofolio/assets/images/aboutme.jpg" class="img-thumbnail mb-3"> -->
+         <img src="{{site.url}}/assets/images/aboutme.jpg" class="img-thumbnail">
+         <div class="card mb-3">
+            <div class="card-header fs-5">
+               Education
+            </div>
+            <div class="card-body">
+               <ul class="timeline">
+                  <li>
+                     <span class="fw-bold">iSTTS</span>
+                     <span class="float-end">2017-2021</span>
+                     <p>Mahasiswa Teknik Informatika dari Institut Sains dan Teknologi Terpadu Surabaya dengan penjurusan Computer Science. Memiliki background Web Developer (Laravel dan Node.JS) dan Computer Vision (Keras Python).</p>
+                  </li>
+                  <li>
+                     <span class="fw-bold">SMAK St.Louis 1</span>
+                     <span class="float-end">2014-2017</span>
+                     <p>Siswa dari SMAK St.Louis 1 Surabaya dengan penjurusan IPA. </p>
+                  </li>
+               </ul> 
+            </div>
+         </div>
+      </div>
+   </div>   
+</body>
+{% include footer.html %}
+</html>
