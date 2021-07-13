@@ -78,17 +78,31 @@
                {% endfor %}
              </div>
           </div>
-
           <div class="card mb-3">
             <div class="card-header fs-5">Skills</div>
             <div class="card-body">
-               <p></p>
+               <div class="accordion" id="accordionExample">
+                  {% for skill in site.data.skills %}
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_{{forloop.index}}">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{{forloop.index}}" aria-expanded="false" aria-controls="collapse_{{forloop.index}}">
+                        {{skill.title}}
+                      </button>
+                    </h2>
+                    <div id="collapse_{{forloop.index}}" class="accordion-collapse collapse" aria-labelledby="heading_{{forloop.index}}" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        {{skill.desc}}
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
             </div>
           </div>
       </div>
+      </div>
       <div class="col-sm-4">
          <!-- <img src="http://127.0.0.1:4000/portofolio/assets/images/aboutme.jpg" class="img-thumbnail mb-3"> -->
-         <img src="{{site.url}}/assets/images/aboutme.jpg" class="img-thumbnail">
+         <img src="{{site.url}}/assets/images/aboutme.jpg" class="img-thumbnail mb-3">
          <div class="card mb-3">
             <div class="card-header fs-5">
                Education
@@ -108,8 +122,24 @@
                </ul> 
             </div>
          </div>
+         <div class="card mb-3">
+            <div class="card-header">
+               <span class="fs-5">Contact Me</span>
+            </div>
+            <div class="card-body">
+               Hubungi Saya dengan: 
+               <ul class="list-group list-group-flush">
+                  {% for link in site.data.contact_links %}
+                  <li class="list-group-item"><i class="{{link.icon}}"></i>&nbsp;
+                     <a href="{{link.link}}" class="link-dark">{{link.name}}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+            </div>
+         </div>
       </div>
    </div>   
 </body>
 {% include footer.html %}
+{% include cdn_script.html %}
 </html>
