@@ -20,14 +20,14 @@
    {% for post in site.posts %}
    <div class="card mb-3">
       <div class="card-body">
-         <a href="{{post.url}}"><span class="fs-3">{{post.title}}</span></a>
+         <a href="{{site.url}}{{post.url}}"><span class="fs-3">{{post.title}}</span></a>
          <p>
             {{post.desc}}
          </p>
       </div>
       <div class="card-footer">
          <span>
-         <a href="{{post.url}}" class="btn btn-outline-primary float-end">Cek</a>
+         <a href="{{site.url}}{{post.url}}" class="btn btn-outline-primary float-end">Cek</a>
          {% for tag in post.tags %}
             <span class="badge rounded-pill bg-secondary p-2">{{tag}}</span>
          {% endfor %}
