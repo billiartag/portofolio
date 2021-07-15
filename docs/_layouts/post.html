@@ -4,12 +4,31 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>{{post.title}} - Billiarta</title>
+   <title>{{page.title}} - Billiarta</title>
    {% include cdn_header.html %}
 </head>
 <body class="container">
-   {% include navbar.html %}
-   page
+   {% include navbar.html %}   
+   <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{sute.url}}/projects">Projects</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{page.title}}</li>
+      </ol>
+    </nav>
+   <div class="p-2 mb-3 bg-light rounded-3">
+      <div class="container-fluid py-3">
+        <h1 class="display-5 fw-bold">{{page.title}}</h1>
+      </div>
+    </div>
+    <div class="mb-3">
+      <span class="float-end"><a href="{{site.url}}{{page.url}}" class="btn btn-outline-primary" >Link</a></span>
+      {% for tag in page.tags %}
+      <span class="badge bg-secondary p-2">{{tag}}</span>
+      {% endfor %}
+      {% if page.tags.size != 0 %}
+      <br>
+      {% endif %}
+    </div> 
    {{content}}
 </body>
 {% include footer.html %}
