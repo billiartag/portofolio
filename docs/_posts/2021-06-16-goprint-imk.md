@@ -19,22 +19,22 @@ Seperti yang terlihat pada gambar, halaman login berisikan _field_ username dan 
 
 Message Berhasil             |  Message Gagal
 :-------------------------:|:-------------------------:
-![Message berhasil]({{site.url}}/assets/goprint-imk/login.PNG =x200)  |  ![Message gagal]({{site.url}}/assets/goprint-imk/regist.PNG =x200)
+![Message berhasil]({{site.url}}/assets/goprint-imk/login.PNG =250x)  |  ![Message gagal]({{site.url}}/assets/goprint-imk/regist.PNG =250x)
 
 Setelah user customer berhasil mendaftarkan diri ke dalam sistem dan melakukan login maka user dihadapkan dengan halaman _home_ yang menampilkan sebuah tabel yang berisikan _order_\-an yang telah dibuat sebelummnya. Untuk melakukan order, user dapat menekan tombol "order" di sebelah tombol "logout" yang terdapat pada _navigation bar_. Sesuai dengan namanya, navgation bar ini terletak pada bagian atas yang berisikan menu-menu utama yang dapat diakses oleh user. Pada user customer navbar berisikan: link menuju home, tombol menuju halaman order, dan tombol logout untuk memutuskan _session_ pada sistem. Tombol logout diberi warna aksen merah untuk membedakan fungsi dari tombol yang berdampingan. Gambar di bawah adalah perbandingan dari customer yang belum pernah melakukan order dengan customer yang sudah pernah melakukan order dan menyelesaikan order-nya.
 
 Halaman Home Customer             |  Halaman Home Customer Setelah Meng-order
 :-------------------------:|:-------------------------:
-![Halaman home customer]({{site.url}}/assets/goprint-imk/index_cust.PNG =x200)  |  ![Halaman home customer setelah order]({{site.url}}/assets/goprint-imk/index_cust_selesai.PNG =x200)
+![Halaman home customer]({{site.url}}/assets/goprint-imk/index_cust.PNG =250x)  |  ![Halaman home customer setelah order]({{site.url}}/assets/goprint-imk/index_cust_selesai.PNG =250x)
 
 Untuk melakukan order, maka customer harus mengisikan beberapa detail yang kemudian disimpan ke dalam sistem. Detail dari order tersebut adalah: tanggal pengiriman atau tanggal pengambilan, alamat jika dikirim, jenis kertas yang digunakan, jumlah halaman, jumlah salinan, dan _file_ yang akan diprint. Setelah customer mengisi semua field tersebut, maka total biaya yang dikeluarkan akan ditampilkan pada bagian bawah form. Pada bagian kiri bawah terdapat 2 (dua) tombol, yaitu tombol "cancel" untuk membatalkan rencana order yang mengembalikan customer ke halaman home dan tombol "checkout" untuk menyimpan order ke dalam sistem dan menampilkan rincian pembayaran.  
 
 Halaman Order             |  Halaman Home Customer Setelah Meng-order
 :-------------------------:|:-------------------------:
-![Halaman order]({{site.url}}/assets/goprint-imk/order_isi.PNG =x200)  |  ![Halaman setelah order]({{site.url}}/assets/goprint-imk/order_checkout.PNG =x200)
+![Halaman order]({{site.url}}/assets/goprint-imk/order_isi.PNG =250x)  |  ![Halaman setelah order]({{site.url}}/assets/goprint-imk/order_checkout.PNG =250x)
 
 Bagian terakhir adalah halaman home dari user admin, halaman ini berisikan order yang belum terselesaikan pada sistem. Admin dapat memilih untuk menyelesaikan order atau membatalkan order. Ketika admin menekan salah satu tombol ini, maka sistem akan memroses dan menghilangkannya dari halaman home admin. User dari admin ini dapat diakses dengan "admin" dalam kedua field. Gambar di bawah adalah gambaran dari halaman admin. 
 
-![Halaman home admin]({{site.url}}/assets/goprint-imk/index_admin.PNG =x200) 
+![Halaman home admin]({{site.url}}/assets/goprint-imk/index_admin.PNG =250x) 
 
 Memang sistem ini sangat sederhana dan memiliki banyak _plot-hole_, hal ini disebabkan karna sistem ini hanya digunakan untuk _showcase_ tampilan dan bukan showcase dari kemampuan yang dimiliki sistem.
