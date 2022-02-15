@@ -5,6 +5,7 @@ date:   2021-06-16 13:00:00 +0700
 date_creation: "2019"
 tags: Firebase Android_Java Assignment
 desc: "Proyek ini merupakan tugas akhir semester dari mata kuliah <i>Software Development Project</i> (SDP) yang mengangkat topik jasa penitipan barang dengan nama <b>'Titip Aku'</b>, yang berbasis Android Java."
+toc: true
 ---
 
 Aplikasi *Titip-Aku* merupakan tugas akhir semester dari mata kuliah *Software Development Project* yang menghasilkan sebuah aplikasi Android. Aplikasi ini memanfaatkan *database* NoSQL Firebase untuk menyimpan data.  Aplikasi ini bertujuan untuk memfasilitasi pengguna untuk melakukan kegiatan titip barang dari suatu tempat menuju tempat lainnya.

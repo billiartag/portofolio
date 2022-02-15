@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>{{page.title}} - Billiarta</title>
    {% include cdn_header.html %}
+   {% seo %}
 </head>
 <body class="container">
    {% include navbar.html %}   
@@ -30,6 +31,9 @@
       {% endif %}
     </div> 
     <div class="container">
+      <div id="table-of-contents">
+        {% toc %}
+      </div>
       {{content}}
     </div>
 </body>
